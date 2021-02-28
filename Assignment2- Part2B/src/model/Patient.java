@@ -13,10 +13,83 @@ import java.util.Scanner;
  *
  * @author kalyanijohare
  */
-public class Patient extends Person {
+public class Patient {
 
-    ArrayList<VitalSigns> list = new ArrayList<VitalSigns>();
-    ArrayList<Encounter> eList = new ArrayList<Encounter>();
+    public String FirstName;
+    public String LastName;
+    private float ageGroup;
+    private float respiratoryRate;
+    private float heartRate;
+    private float systolicBloodPressure;
+    private float weightKg;
+    private float weightPounds;
+    private String attribute;
+    
+    
+
+    public String getFirstName() {
+        return FirstName;
+    }
+
+    public void setFirstName(String FirstName) {
+        this.FirstName = FirstName;
+    }
+
+    public String getLastName() {
+        return LastName;
+    }
+
+    public void setLastName(String LastName) {
+        this.LastName = LastName;
+    }
+
+    public float getAgeGroup() {
+        return ageGroup;
+    }
+
+    public void setAgeGroup(float ageGroup) {
+        this.ageGroup = ageGroup;
+    }
+
+    public float getRespiratoryRate() {
+        return respiratoryRate;
+    }
+
+    public void setRespiratoryRate(float respiratoryRate) {
+        this.respiratoryRate = respiratoryRate;
+    }
+
+    public float getHeartRate() {
+        return heartRate;
+    }
+
+    public void setHeartRate(float heartRate) {
+        this.heartRate = heartRate;
+    }
+
+    public float getSystolicBloodPressure() {
+        return systolicBloodPressure;
+    }
+
+    public void setSystolicBloodPressure(float systolicBloodPressure) {
+        this.systolicBloodPressure = systolicBloodPressure;
+    }
+
+    public float getWeightKg() {
+        return weightKg;
+    }
+
+    public void setWeightKg(float weightKg) {
+        this.weightKg = weightKg;
+    }
+
+    public float getWeightPounds() {
+        return weightPounds;
+    }
+
+    public void setWeightPounds(float weightPounds) {
+        this.weightPounds = weightPounds;
+    }
 
     private void display() {
 
@@ -30,9 +103,11 @@ public class Patient extends Person {
         }
     }
 
+    ArrayList<VitalSigns> list = new ArrayList<VitalSigns>();
+
     @Override
     public String toString() {
-        return "Patient{" + "FirstName = " + FirstName + ", LastName = " +LastName+ ", Encounter List = " + eList +'}';
+        return "Patient{" + "list=" + list + '}';
     }
 
     public static void main(String[] args) {
@@ -45,15 +120,12 @@ public class Patient extends Person {
         String attribute;
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter FirstName: ");
+        
+            System.out.println("Enter FirstName: ");
             String FirstName = sc.next();
-            patient.setFirstName(FirstName);
             System.out.println("Enter LastName: ");
             String LastName = sc.next();
-            patient.setLastName(LastName);
-            
         do {
-            
             System.out.println("Enter Age:");
             float ageGroup = sc.nextFloat();
             System.out.println("Enter Respiratory Rate:");
@@ -76,26 +148,15 @@ public class Patient extends Person {
 //            vs.setWeightKg(weightKg);
 //            vs.setWeightPounds(weightPounds);
 
-            Encounter en = new Encounter(new VitalSigns(ageGroup,respiratoryRate, heartRate, systolicBloodPressure,weightKg, weightPounds));
-
             patient.list.add(new VitalSigns(ageGroup,respiratoryRate, heartRate, systolicBloodPressure,weightKg, weightPounds));
-            patient.eList.add(en);
+            
             
             System.out.println("Do you want to add more details(Yes/No)");
 
             choice = sc.next();
         } while (choice.equalsIgnoreCase("Yes"));
-        
-        Integer counter = patient.eList.size();
-        
         System.out.println(patient.list);
-        System.out.println(patient.eList);
-        
-        System.out.println("FirstName:" +patient.getFirstName() +  "  LastName:" +patient.getLastName());
-        
-        System.out.println("Number of Encounters:" +counter);
-        
-        
+
         System.out.println("Attribute name to be checked: \n1.RespiratoryRate \n2.HeartRate \n3.SystolicBloodPressure \n4.WeightKilos \n5.WeightPounds");
         attribute = sc.next();
         VitalSigns vsNew = new VitalSigns();
