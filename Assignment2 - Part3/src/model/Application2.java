@@ -104,5 +104,6 @@ public class Application2 {
             }
         }
         System.out.println("Number of abnormal cases in Community2:" + count2);
+         System.out.println("city");
     }
 }

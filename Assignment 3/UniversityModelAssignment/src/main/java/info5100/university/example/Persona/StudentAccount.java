@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
-
-import java.util.ArrayList;
+package info5100.university.example.Persona;
 
 /**
  *
- * @author kalyanijohare
+ * @author kal bugrara
  */
-public class City {
-
-    ArrayList<Community> community = new ArrayList<Community>();
-   
+public class StudentAccount {
+    
 }
