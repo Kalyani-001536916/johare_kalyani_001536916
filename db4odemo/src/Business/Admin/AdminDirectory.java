@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author nishok
+ * @author kalyanijohare
  */
 public class AdminDirectory {
     private List<Admin> adminList = new ArrayList();
