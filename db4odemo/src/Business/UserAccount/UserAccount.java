@@ -4,9 +4,8 @@
  */
 package Business.UserAccount;
 
-import Business.Employee.Employee;
-import Business.Role.Role;
-import Business.WorkQueue.WorkQueue;
+import Business.EcoSystem;
+import Business.UserAccount.User.Role;
 
 /**
  *
@@ -14,22 +13,32 @@ import Business.WorkQueue.WorkQueue;
  */
 public class UserAccount {
     
+    private int accountId;
     private String username;
     private String password;
-    private Employee employee;
+    private User user;
     private Role role;
-    private WorkQueue workQueue;
+    private static int counter=0;
 
-    public UserAccount() {
-        workQueue = new WorkQueue();
+    //String firstName, String lastName, String username, String password, int restaurantId, Role role
+    public UserAccount(String firstName, String lastName, String username, String password, Role role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+        accountId = ++counter;
+        
+        if(role==Role.Admin)this.user = EcoSystem.getInstance().getAdminDirectory().createAdmin(accountId);
+        if(role==Role.Customer)this.user = EcoSystem.getInstance().getCustomerDirectory().createCustomer(accountId);
+        if(role==Role.DeliveryMan)this.user = EcoSystem.getInstance().getDeliveryManDirectory().createDeliveryMan(accountId);
+        if(role==Role.Manager)this.user = EcoSystem.getInstance().getManagerDirectory().createManager(accountId);
+        this.user.setFirstName(firstName);
+        this.user.setLastName(lastName);
     }
-    
-    
     
     public String getUsername() {
         return username;
     }
-
+    
     public void setUsername(String username) {
         this.username = username;
     }
@@ -46,24 +55,26 @@ public class UserAccount {
         return role;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-
     public void setRole(Role role) {
         this.role = role;
     }
 
-    public Employee getEmployee() {
-        return employee;
+    public int getAccountId() {
+        return accountId;
     }
 
-    public WorkQueue getWorkQueue() {
-        return workQueue;
+    public void setAccountId(int accountId) {
+        this.accountId = accountId;
     }
 
-    
-    
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+  
     @Override
     public String toString() {
         return username;
