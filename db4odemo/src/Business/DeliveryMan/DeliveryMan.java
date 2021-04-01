@@ -24,9 +24,8 @@ public class DeliveryMan extends User{
     public void setAvailable(boolean available) {
         this.available = available;
     }
-    public DeliveryMan(int id){//, int restaurantId){
+    public DeliveryMan(int id){
         super(id);
-//        this.restaurantID=restaurantId;
     }
     public Restaurant getRestaurant() {
         return restaurant;

@@ -45,8 +45,6 @@ public class UserAccountDirectory {
     public void updateUserAccount(int id, String firstName, String lastName, String username, String password, Role role){
         UserAccount tempp = new UserAccount(firstName, lastName, username, password, role); 
         User temp = new User(firstName,lastName) {};
-//if(!checkIfUsernameIsUnique(username)) return null;
-        //User user = new User(firstName, lastName) {};
         for(int i=0; i<userAccountList.size(); i++){
             if(userAccountList.get(i).getAccountId()==id)                
                 userAccountList.get(i).setUser(temp);// = tempp;
@@ -55,8 +53,6 @@ public class UserAccountDirectory {
                 userAccountList.get(i).setPassword(password);        
             
         }
-        //userAccountList.add(userAccount);
-        //return userAccount;
         
     }
            

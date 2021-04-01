@@ -31,11 +31,8 @@ public class CustomerDirectory {
     }
     public void updateCustomer(String firstName, String lastName, int id){
         Customer temp=new Customer(id);
-        for(Customer m:this.getCustomerList()){//EcoSystem.getInstance().getManagerDirectory().getManagerList()){//   this.getManagerList()){
+        for(Customer m:this.getCustomerList()){
             if(m.getId()==id){
-                //for(Restaurant r:EcoSystem.getInstance().getRestaurantDirectory().getRestaurantList()){//.getRestaurantById(Integer.parseInt(jTextField4.getText()));){
-                //    if(r.getId()==restaurantID){                        
-                        //m.setRestaurantByID(restaurantID);
                         m.setFirstName(firstName);
                         m.setLastName(lastName);
                         break;

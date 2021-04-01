@@ -29,8 +29,7 @@ public class RestaurantDirectory {
         Restaurant temp=new Restaurant(name);
         for(Restaurant r:this.restaurantList){
             if(r.getId()==Integer.parseInt(id)){
-                r.setName(name);//=rest;
-                //temp=r;
+                r.setName(name);
                 temp=r;
             }
         }

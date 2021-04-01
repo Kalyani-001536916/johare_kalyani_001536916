@@ -30,9 +30,9 @@ public class ManagerDirectory {
     }
     public void updateManager(String firstName, String lastName, int id, int restaurantID){
         Manager temp=new Manager(id);
-        for(Manager m:this.getManagerList()){//EcoSystem.getInstance().getManagerDirectory().getManagerList()){//   this.getManagerList()){
+        for(Manager m:this.getManagerList()){
             if(m.getId()==id){
-                for(Restaurant r:EcoSystem.getInstance().getRestaurantDirectory().getRestaurantList()){//.getRestaurantById(Integer.parseInt(jTextField4.getText()));){
+                for(Restaurant r:EcoSystem.getInstance().getRestaurantDirectory().getRestaurantList()){
                     if(r.getId()==restaurantID){                        
                         m.setRestaurantByID(restaurantID);
                         m.setFirstName(firstName);

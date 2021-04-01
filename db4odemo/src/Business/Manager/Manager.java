@@ -17,9 +17,6 @@ public class Manager extends User{
     
     private Restaurant restaurant;
 
-   // public Manager(){
-        
-   // }
     public Restaurant getRestaurant() {
         return restaurant;
     }

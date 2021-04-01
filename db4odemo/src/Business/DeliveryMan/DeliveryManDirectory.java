@@ -30,9 +30,9 @@ public class DeliveryManDirectory {
     }
     public void updateDeliveryMan(String firstName, String lastName, int id, int restaurantID){
         DeliveryMan temp=new DeliveryMan(id);
-        for(DeliveryMan m:this.getDeliveryManList()){//EcoSystem.getInstance().getManagerDirectory().getManagerList()){//   this.getManagerList()){
+        for(DeliveryMan m:this.getDeliveryManList()){
             if(m.getId()==id){
-                for(Restaurant r:EcoSystem.getInstance().getRestaurantDirectory().getRestaurantList()){//.getRestaurantById(Integer.parseInt(jTextField4.getText()));){
+                for(Restaurant r:EcoSystem.getInstance().getRestaurantDirectory().getRestaurantList()){
                     if(r.getId()==restaurantID){                        
                         m.setRestaurantByID(restaurantID);
                         m.setFirstName(firstName);

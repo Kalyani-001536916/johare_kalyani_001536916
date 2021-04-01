@@ -20,7 +20,6 @@ public class UserAccount {
     private Role role;
     private static int counter=0;
 
-    //String firstName, String lastName, String username, String password, int restaurantId, Role role
     public UserAccount(String firstName, String lastName, String username, String password, Role role) {
         this.username = username;
         this.password = password;
