@@ -46,12 +46,13 @@ public class UserAccountDirectory {
         UserAccount tempp = new UserAccount(firstName, lastName, username, password, role); 
         User temp = new User(firstName,lastName) {};
         for(int i=0; i<userAccountList.size(); i++){
-            if(userAccountList.get(i).getAccountId()==id)                
+            if(userAccountList.get(i).getAccountId()==id)  {              
                 userAccountList.get(i).setUser(temp);// = tempp;
                 userAccountList.get(i).setPassword(password);
                 userAccountList.get(i).setUsername(username);
                 userAccountList.get(i).setPassword(password);        
-            
+                break;
+        }
         }
         
     }

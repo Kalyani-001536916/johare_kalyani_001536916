@@ -141,7 +141,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/image1.jpeg"))); // NOI18N
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(-130, 0, 820, 490);
+        jLabel3.setBounds(-130, 0, 820, 540);
         jPanel2.add(jLabel4);
         jLabel4.setBounds(220, 230, 330, 170);
 
@@ -163,8 +163,6 @@ public class MainJFrame extends javax.swing.JFrame {
         else if (auth.getRole()==Role.Admin){
             SystemAdminWorkAreaJPanel yoyo = new SystemAdminWorkAreaJPanel(); 
             jSplitPane1.setRightComponent(yoyo);
-            //container.add(sex);
-            //container.revalidate();
         }
         else if(auth.getRole()==Role.Manager){
             AdminWorkAreaJPanel yoyo = new AdminWorkAreaJPanel(((Manager)auth.getUser()).getRestaurant()); 
@@ -180,6 +178,7 @@ public class MainJFrame extends javax.swing.JFrame {
             CustomerAreaJPanel yoyo = new CustomerAreaJPanel(customer); 
             jSplitPane1.setRightComponent(yoyo);
         }
+        logoutJButton.setEnabled(true);
         //get username, password from frame
         //pass these values to Ecosystem.UserAccountDirectory.AuthenticateUser()
         //If result is not null, get the user role from the returned object and 
@@ -203,6 +202,7 @@ public class MainJFrame extends javax.swing.JFrame {
         CardLayout crdLyt = (CardLayout) container.getLayout();
         crdLyt.next(container);
         dB4OUtil.storeSystem(system);
+        jSplitPane1.setRightComponent(container);
     }//GEN-LAST:event_logoutJButtonActionPerformed
 
     private void userNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameJTextFieldActionPerformed
