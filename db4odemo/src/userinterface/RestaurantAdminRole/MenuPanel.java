@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author nisho
+ * @author kalyanijohare
  */
 public class MenuPanel extends javax.swing.JPanel {
     

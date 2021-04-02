@@ -14,7 +14,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author nisho
+ * @author kalyanijohare
  */
 public class Create_CustomerJPanel extends javax.swing.JPanel {
 
@@ -74,7 +74,7 @@ public class Create_CustomerJPanel extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Add Customer");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jButton1.setText("Create");

@@ -13,7 +13,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author nisho
+ * @author kalyanijohare
  */
 public class Create_RestaurantManagerJPanel extends javax.swing.JPanel {
 
@@ -49,28 +49,32 @@ public class Create_RestaurantManagerJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Add Manager");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, 20));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel4.setText("Username");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, 20));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel5.setText("Password");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel6.setText("Restaurant ID");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 20));
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 70, -1));
-        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 70, -1));
-        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 70, -1));
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 120, -1));
+        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 120, -1));
+        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 120, -1));
 
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jButton1.setText("Create");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +83,7 @@ public class Create_RestaurantManagerJPanel extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, -1, -1));
 
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel7.setText("First Name");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
@@ -87,8 +92,9 @@ public class Create_RestaurantManagerJPanel extends javax.swing.JPanel {
                 jTextField5ActionPerformed(evt);
             }
         });
-        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 70, -1));
+        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 120, -1));
 
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel8.setText("Last Name");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
@@ -97,7 +103,7 @@ public class Create_RestaurantManagerJPanel extends javax.swing.JPanel {
                 jTextField6ActionPerformed(evt);
             }
         });
-        add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 70, -1));
+        add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 120, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

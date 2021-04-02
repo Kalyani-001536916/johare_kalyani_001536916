@@ -9,7 +9,7 @@ import Business.EcoSystem;
 
 /**
  *
- * @author nisho
+ * @author kalyanijohare
  */
 public class Delete_DeliveryMenJPanel extends javax.swing.JPanel {
 
@@ -39,7 +39,7 @@ public class Delete_DeliveryMenJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Delivery Men");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 418, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 150, -1));
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel9.setText("Delivery Man ID");

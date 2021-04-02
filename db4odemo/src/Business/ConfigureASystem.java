@@ -33,38 +33,40 @@ public class ConfigureASystem {
         system.setRestaurantDirectory(new RestaurantDirectory());
         system.setDeliveryManDirectory(new DeliveryManDirectory());
         
-        Restaurant re1 = system.getRestaurantDirectory().createRestaurant("restaurant1");     
-        Restaurant re2 = system.getRestaurantDirectory().createRestaurant("restaurant2");
+        Restaurant res1 = system.getRestaurantDirectory().createRestaurant("Maharaja");     
+        Restaurant res2 = system.getRestaurantDirectory().createRestaurant("Dunkin");
         
-        system.getUserAccountDirectory().createUserAccount("a", "A1","a", "a",User.Role.Admin);
-        UserAccount m1 = system.getUserAccountDirectory().createUserAccount("manager","M1","m","m",User.Role.Manager);
-        ((Manager)(m1.getUser())).setRestaurant(re1);
-        UserAccount m2 = system.getUserAccountDirectory().createUserAccount("manager","M2","m2","m",User.Role.Manager);
-        ((Manager)(m2.getUser())).setRestaurant(re2);
-        UserAccount d1 = system.getUserAccountDirectory().createUserAccount("delivery", "D1", "d", "d", User.Role.DeliveryMan);
-        ((DeliveryMan)(d1.getUser())).setRestaurant(re1);
-        UserAccount d2 = system.getUserAccountDirectory().createUserAccount("delivery", "D2", "d2", "d", User.Role.DeliveryMan);
-        ((DeliveryMan)(d2.getUser())).setRestaurant(re1);
-        UserAccount d3 = system.getUserAccountDirectory().createUserAccount("delivery", "D3", "d3", "d", User.Role.DeliveryMan);
-        ((DeliveryMan)(d3.getUser())).setRestaurant(re2);
-        UserAccount c1 = system.getUserAccountDirectory().createUserAccount("Customer", "C1", "c", "c", User.Role.Customer);
+        system.getUserAccountDirectory().createUserAccount("kalyani", "johare","kalyani", "kalyani$",User.Role.Admin);
+        
+        UserAccount m1 = system.getUserAccountDirectory().createUserAccount("oliver","j","oliver","oliver$",User.Role.Manager);
+        ((Manager)(m1.getUser())).setRestaurant(res1);
+        UserAccount m2 = system.getUserAccountDirectory().createUserAccount("emma","watson","emma","emma$",User.Role.Manager);
+        ((Manager)(m2.getUser())).setRestaurant(res2);
+        UserAccount d1 = system.getUserAccountDirectory().createUserAccount("emily", "w", "emily", "emily$", User.Role.DeliveryMan);
+        ((DeliveryMan)(d1.getUser())).setRestaurant(res1);
+        UserAccount d2 = system.getUserAccountDirectory().createUserAccount("sophia", "D", "sohpia", "shopia$", User.Role.DeliveryMan);
+        ((DeliveryMan)(d2.getUser())).setRestaurant(res1);
+        UserAccount d3 = system.getUserAccountDirectory().createUserAccount("alex", "smith", "alex", "alex$", User.Role.DeliveryMan);
+        ((DeliveryMan)(d3.getUser())).setRestaurant(res2);
+        UserAccount c1 = system.getUserAccountDirectory().createUserAccount("james", "B", "james", "james$", User.Role.Customer);
         ((Customer)(c1.getUser())).setAddress("1422 Park Drive");
-        UserAccount c2 = system.getUserAccountDirectory().createUserAccount("Customer", "C2", "c2", "c", User.Role.Customer);
+        UserAccount c2 = system.getUserAccountDirectory().createUserAccount("jim", "J", "jim", "jim$", User.Role.Customer);
         ((Customer)(c2.getUser())).setAddress("1298 New Bury St");
         
-        Item i1 = new Item("Tacos", 4.99f,re1);
-        Item i2 = new Item("Chipotle", 2.99f,re1);
-        Item i3 = new Item("Pasta", 9.99f,re1);
-        Item i4 = new Item("Soup", 1.99f,re2);
-        Item i5 = new Item("Rice", 2.99f,re2);
-        Item i6 = new Item("Noodles", 6.99f,re2);
+        Item i1 = new Item("Paneer", 4.99f,res1);
+        Item i2 = new Item("DalTadka", 2.99f,res1);
+        Item i3 = new Item("Biryani", 9.99f,res1); 
         
-        re1.addMenuItem(i1);
-        re1.addMenuItem(i2);
-        re1.addMenuItem(i3);
-        re2.addMenuItem(i4);
-        re2.addMenuItem(i5);
-        re2.addMenuItem(i6);
+        Item i4 = new Item("HotChocolate", 3.99f,res2);
+        Item i5 = new Item("Coffee", 5.05f,res2);
+        Item i6 = new Item("ChaiLatte", 8.00f,res2);
+        
+        res1.addMenuItem(i1);
+        res1.addMenuItem(i2);
+        res1.addMenuItem(i3);
+        res2.addMenuItem(i4);
+        res2.addMenuItem(i5);
+        res2.addMenuItem(i6);
         
         List<Item> order = new ArrayList();
         order.add(i1);
@@ -72,12 +74,7 @@ public class ConfigureASystem {
         List<Item> order2 = new ArrayList();
         order2.add(i4);
         order2.add(i5);
-        Order orderObject1 = new Order((Customer)c1.getUser(),order,"spicy",re1);
-        Order orderObject2 = new Order((Customer)c1.getUser(),order2,"sweet",re2);
-        re1.getOrders().add(orderObject1);
-        ((Customer)c1.getUser()).addOrder(orderObject1);
-        re2.getOrders().add(orderObject2);
-        ((Customer)c1.getUser()).addOrder(orderObject2);
+       
         
         return system;
     }

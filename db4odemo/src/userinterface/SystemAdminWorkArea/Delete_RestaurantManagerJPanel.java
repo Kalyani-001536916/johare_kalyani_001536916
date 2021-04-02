@@ -9,7 +9,7 @@ import Business.EcoSystem;
 
 /**
  *
- * @author nisho
+ * @author kalyanijohare
  */
 public class Delete_RestaurantManagerJPanel extends javax.swing.JPanel {
 
@@ -39,12 +39,12 @@ public class Delete_RestaurantManagerJPanel extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel3.setText("Manager ID");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 100, -1));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Delete Manager");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jButton1.setText("Delete");

@@ -104,7 +104,7 @@ public class OrderDetailsPopup extends javax.swing.JPanel {
         jLabel7.setText("Comments : ");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 254, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel8.setText("Order Details");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 12, -1, -1));
 
@@ -154,7 +154,7 @@ public class OrderDetailsPopup extends javax.swing.JPanel {
         jTextField9.setEditable(false);
         add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 114, 160, -1));
 
-        jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel12.setText("Restaurant - ");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
     }// </editor-fold>//GEN-END:initComponents

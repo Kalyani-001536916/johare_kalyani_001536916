@@ -13,7 +13,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author nisho
+ * @author kalyanijohare
  */
 public class Update_RestaurantManagerJPanel extends javax.swing.JPanel {
 
@@ -64,7 +64,7 @@ public class Update_RestaurantManagerJPanel extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Update Restaurant Managers");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jButton1.setText("Update");
@@ -114,7 +114,7 @@ public class Update_RestaurantManagerJPanel extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel5.setText("Password");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +122,13 @@ public class Update_RestaurantManagerJPanel extends javax.swing.JPanel {
             }
         });
         add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 130, -1));
-        add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 130, -1));
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 130, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -137,7 +143,7 @@ public class Update_RestaurantManagerJPanel extends javax.swing.JPanel {
         
         //UserAccount(String firstName, String lastName, String username, String password, Role role)
         EcoSystem.getInstance().getManagerDirectory().updateManager(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()), Integer.parseInt(jTextField4.getText()));//,User.Role.Manager);
-        EcoSystem.getInstance().getUserAccountDirectory().updateUserAccount(Integer.parseInt((jTextField3.getText())),jTextField1.getText(),jTextField2.getText(), jTextField1.getText(),jTextField1.getText(), User.Role.Manager);//, TOOL_TIP_TEXT_KEY, TOOL_TIP_TEXT_KEY, User.Role.Admin);
+        EcoSystem.getInstance().getUserAccountDirectory().updateUserAccount(Integer.parseInt((jTextField3.getText())),jTextField1.getText(),jTextField2.getText(), jTextField5.getText(),jTextField6.getText(), User.Role.Manager);//, TOOL_TIP_TEXT_KEY, TOOL_TIP_TEXT_KEY, User.Role.Admin);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -156,6 +162,10 @@ public class Update_RestaurantManagerJPanel extends javax.swing.JPanel {
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
 
     }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

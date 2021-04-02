@@ -11,7 +11,7 @@ import Business.UserAccount.User;
 
 /**
  *
- * @author nisho
+ * @author kalyanijohare
  */
 public class Update_DeliveryMenJPanel extends javax.swing.JPanel {
 
@@ -51,22 +51,28 @@ public class Update_DeliveryMenJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Delivery Men");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 418, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 130, -1));
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel9.setText("Delivery Man ID");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 56, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel7.setText("Delivery Man First Name");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 96, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel8.setText("Delivery Man Last Name");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 136, -1, -1));
-        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 53, 54, -1));
-        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 93, 54, -1));
-        add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 133, 54, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
+        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 160, -1));
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 160, -1));
+        add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 160, -1));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jButton1.setText("Update");
@@ -79,24 +85,30 @@ public class Update_DeliveryMenJPanel extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel10.setText("Restaurant ID");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
-        add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 54, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, 20));
+        add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 160, -1));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel4.setText("Username");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, 30));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, 30));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel5.setText("Password");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
 
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField8ActionPerformed(evt);
             }
         });
-        add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 130, -1));
-        add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 130, -1));
+        add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 160, -1));
+
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+        add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 160, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -113,6 +125,14 @@ public class Update_DeliveryMenJPanel extends javax.swing.JPanel {
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
 
     }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

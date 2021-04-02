@@ -38,7 +38,7 @@
                       <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                       <Component id="jTextField2" min="-2" pref="130" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jLabel2" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="1" min="-2" pref="173" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="130" max="32767" attributes="0"/>
           </Group>
